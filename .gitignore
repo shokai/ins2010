@@ -1,0 +1,9 @@
+*.log
+*~
+.DS_Store
+db/*
+db*
+.fuse*
+*.tch
+log/*
+tmp/*
