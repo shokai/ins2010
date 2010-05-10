@@ -1,5 +1,11 @@
 <h1>Chobitter#index</h1>
+<% form_for :chobit, @chobit, :url => {:action => 'update'} do |f| -%>
+<%= f.text_field :msg %>
+<%= submit_tag 'post' %>
+<% end -%>
+
 <% @chobits.each do |c| -%>
-<%= c.msg %> (<%= c.created_at %>)<br>
+<%= c.msg %> (<%= c.created_at %>)<br />
+<%= link_to '[削除]', :action => 'delete', :id => c.id %><br />
 <% end -%>
 <p>Find me in app/views/chobitter/index.html.erb</p>
