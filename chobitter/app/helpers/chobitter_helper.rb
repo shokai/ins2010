@@ -1,0 +1,2 @@
+module ChobitterHelper
+end

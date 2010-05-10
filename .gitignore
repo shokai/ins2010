@@ -6,3 +6,4 @@ db/*
 *.tch
 log/*
 tmp/*
+*.sqlite3
