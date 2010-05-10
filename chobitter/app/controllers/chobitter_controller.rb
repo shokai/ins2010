@@ -4,8 +4,14 @@ class ChobitterController < ApplicationController
   end
 
   def update
-    chobit = Chobit.new params[:chobit]
-    chobit.save
+    c = Chobit.new params[:chobit]
+    c.save
+    redirect_to :action => 'index'
+  end
+
+  def delete
+    c = Chobit.find params[:id]
+    c.delete
     redirect_to :action => 'index'
   end
 
