@@ -15,4 +15,11 @@ class ChobitterController < ApplicationController
     redirect_to :action => 'index'
   end
 
+  def fav
+    c = Chobit.find params[:id]
+    c.fav = !c.fav
+    c.save
+    redirect_to :action => 'index'
+  end
+
 end

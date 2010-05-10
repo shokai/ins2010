@@ -5,7 +5,13 @@
 <% end -%>
 
 <% @chobits.reverse.each do |c| -%>
-<%= c.msg %> (<%= c.created_at %>)<br />
+<%= c.msg %> (<%= c.created_at %>)
+<% if c.fav -%>
+<%= link_to '★', :action => 'fav', :id => c.id %>
+<% else -%>
+<%= link_to '☆', :action => 'fav', :id => c.id %>
+<% end -%>
+
 <%= link_to '[削除]', :action => 'delete', :id => c.id %><br />
 <% end -%>
 <p>Find me in app/views/chobitter/index.html.erb</p>
